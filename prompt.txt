@@ -1,0 +1,38 @@
+Buatkan project C++ berbasis konsol bernama "Kalkulator Himpunan" untuk tugas mata kuliah Matematika Diskrit.
+
+SPESIFIKASI TEKNIS
+- Bahasa: C++17, hanya library standar (iostream, set, vector, string, algorithm).
+- Himpunan semesta (U) bertipe bilangan bulat (int). Himpunan disimpan dengan std::set<int> supaya otomatis terurut dan tidak ada duplikat.
+- Seluruh kode ada dalam satu file main.cpp, dengan fungsi-fungsi terpisah untuk setiap operasi dan komentar berbahasa Indonesia di setiap fungsi.
+
+FITUR (menu berulang sampai pengguna memilih keluar)
+1. Input himpunan A dan B (pengguna memasukkan elemen dipisah spasi; duplikat otomatis dihapus).
+2. Input himpunan semesta U (diperlukan untuk komplemen).
+3. Gabungan (A ∪ B)
+4. Irisan (A ∩ B)
+5. Selisih (A − B dan B − A)
+6. Selisih simetris (A ⊕ B)
+7. Komplemen (A' dan B' terhadap U)
+8. Himpunan kuasa (power set) dari A atau B, beserta jumlah anggotanya (2^n)
+9. Hasil kali kartesian (A × B)
+10. Cek hubungan himpunan: apakah A subset B, B subset A, A sama dengan B, atau A saling lepas (disjoint) dengan B
+11. Kardinalitas |A| dan |B|
+12. Tampilkan himpunan A, B, dan U saat ini
+0. Keluar
+
+KETENTUAN OUTPUT
+- Tampilkan himpunan dengan notasi matematika, contoh: {1, 2, 3}. Himpunan kosong ditampilkan sebagai {} atau ∅.
+- Pasangan berurutan pada hasil kali kartesian ditampilkan seperti (1, a) atau (1, 2).
+- Jika himpunan kuasa terlalu besar (n > 10), tampilkan peringatan dan jangan cetak seluruh anggotanya.
+
+VALIDASI INPUT
+- Tangani input yang bukan angka tanpa membuat program crash (gunakan cin.fail(), cin.clear(), cin.ignore()).
+- Jika A, B, atau U belum diisi saat operasi dipilih, tampilkan pesan yang jelas.
+- Jika ada elemen A atau B yang tidak ada di U, beri peringatan sebelum menghitung komplemen.
+
+STRUKTUR KODE
+- Satu fungsi per operasi, misalnya: gabungan(), irisan(), selisih(), selisihSimetris(), komplemen(), himpunanKuasa(), kartesian(), cekSubset().
+- Fungsi cetakHimpunan() dan bacaHimpunan() dipakai ulang di seluruh program.
+- main() hanya berisi loop menu dan switch-case.
+
+Setelah kode selesai, berikan juga contoh input dan output untuk A = {1, 2, 3} dan B = {3, 4, 5} dengan U = {1, 2, 3, 4, 5, 6}.
